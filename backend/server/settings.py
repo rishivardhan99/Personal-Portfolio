@@ -10,8 +10,10 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 # SECURITY
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "django-insecure-replace-me")
-DEBUG = os.getenv("DJANGO_DEBUG", "True") == "True"
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
+DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
+
+ALLOWED_HOSTS = ALLOWED_HOSTS = ["*"]
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -82,12 +84,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # CORS
 # For dev: allow all origins. For prod, set CORS_ALLOWED_ORIGINS in env instead.
-if DEBUG:
-    CORS_ALLOW_ALL_ORIGINS = True
-else:
-    CORS_ALLOW_ALL_ORIGINS = False
-    raw_origins = os.getenv("CORS_ALLOWED_ORIGINS", "")
-    CORS_ALLOWED_ORIGINS = [o for o in raw_origins.split(",") if o]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+
 # REST framework defaults (simple)
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
