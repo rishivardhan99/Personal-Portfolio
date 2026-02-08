@@ -1,0 +1,45 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Python / Django
+# =========================
+backend/venv/
+backend/__pycache__/
+backend/**/*.pyc
+backend/db.sqlite3
+backend/.env
+backend/media/
+backend/staticfiles/
+
+# Django secrets
+*.log
+
+# =========================
+# Node / React
+# =========================
+frontend/client/node_modules/
+frontend/client/build/
+frontend/client/.env
+
+# =========================
+# MySQL / PostgreSQL
+# =========================
+*.sql
+
+# =========================
+# Environment
+# =========================
+.env
+.env.local
+.env.production
+
+# =========================
+# Misc
+# =========================
+coverage/
