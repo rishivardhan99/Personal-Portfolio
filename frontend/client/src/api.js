@@ -1,12 +1,15 @@
 // src/api.js
 import axios from "axios";
 
+
 const API = axios.create({
   baseURL:
-    process.env.REACT_APP_API_URL ||
-    "http://127.0.0.1:8000/api/",
-  timeout: 10000,
+    import.meta.env.VITE_API_URL ||
+    "https://personal-portfolio-w76b.onrender.com/api/",
 });
+
+
+
 
 export default API;
 
