@@ -1,13 +1,16 @@
 // src/api.js
 import axios from "axios";
-import { API_BASE } from "./config";
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/api/",
+  baseURL:
+    process.env.REACT_APP_API_URL ||
+    "http://127.0.0.1:8000/api/",
+  timeout: 10000,
 });
 
-
 export default API;
+
+// -------- API helpers --------
 
 export const fetchExperience = async () => {
   const res = await API.get("experience/");
@@ -25,7 +28,6 @@ export const fetchProjects = async () => {
 };
 
 export const fetchFeaturedProject = async () => {
-  const res = await API.get("projects/?featured=1"); // optionally filter server-side
-  // else we filter client-side in Projects component
+  const res = await API.get("projects/?featured=1");
   return res.data;
 };

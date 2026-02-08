@@ -8,13 +8,13 @@ export default function Footer() {
         <div className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} Rishi • All rights reserved</div>
 
         <div className="flex items-center gap-3">
-          <a href="#" className="social-btn icon-hover text-gray-700 dark:text-gray-200" aria-label="GitHub">
+          <a href="https://github.com/rishivardhan99" className="social-btn icon-hover text-gray-700 dark:text-gray-200" aria-label="GitHub">
             <FaGithub />
           </a>
-          <a href="#" className="social-btn icon-hover text-gray-700 dark:text-gray-200" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/rishi-vardhan-700218245/" className="social-btn icon-hover text-gray-700 dark:text-gray-200" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
-          <a href="#" className="social-btn icon-hover text-gray-700 dark:text-gray-200" aria-label="Instagram">
+          <a href="/" className="social-btn icon-hover text-gray-700 dark:text-gray-200" aria-label="Instagram">
             <FaInstagram />
           </a>
         </div>

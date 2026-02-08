@@ -98,13 +98,13 @@ export default function Contact() {
                 <div className="text-sm font-medium mb-2">Social</div>
 
                 <div className="flex items-center gap-3">
-                  <a href="#" aria-label="GitHub" className="icon-hover social-btn text-gray-700 dark:text-gray-200">
+                  <a href="https://github.com/rishivardhan99" aria-label="GitHub" className="icon-hover social-btn text-gray-700 dark:text-gray-200">
                     <FaGithub />
                   </a>
-                  <a href="#" aria-label="LinkedIn" className="icon-hover social-btn text-gray-700 dark:text-gray-200">
+                  <a href="https://www.linkedin.com/in/rishi-vardhan-700218245/" aria-label="LinkedIn" className="icon-hover social-btn text-gray-700 dark:text-gray-200">
                     <FaLinkedin />
                   </a>
-                  <a href="#" aria-label="Instagram" className="icon-hover social-btn text-gray-700 dark:text-gray-200">
+                  <a href="/" aria-label="Instagram" className="icon-hover social-btn text-gray-700 dark:text-gray-200">
                     <FaInstagram />
                   </a>
                 </div>
