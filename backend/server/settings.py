@@ -82,12 +82,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # CORS
 # For dev: allow all origins. For prod, set CORS_ALLOWED_ORIGINS in env instead.
-if os.getenv("DJANGO_DEBUG", "True") == "True":
+if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
 else:
     CORS_ALLOW_ALL_ORIGINS = False
-    CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "").split(",")
-
+    raw_origins = os.getenv("CORS_ALLOWED_ORIGINS", "")
+    CORS_ALLOWED_ORIGINS = [o for o in raw_origins.split(",") if o]
 # REST framework defaults (simple)
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
